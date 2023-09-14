@@ -12,7 +12,7 @@ from datetime import date
 
 from django.shortcuts import render
 
-from generales.xxxx import SuscribirseForm, ComentarioForm, ContactoForm
+from .forms import SuscribirseForm, ComentarioForm, ContactoForm
 
 from django.http import JsonResponse
 from datetime import datetime, timedelta

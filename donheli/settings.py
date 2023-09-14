@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'generales',
     'ckeditor',
+    'tempus_dominus',
 ]
 
 MIDDLEWARE = [
@@ -67,7 +68,7 @@ ROOT_URLCONF = 'donheli.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -153,6 +154,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # archivo que contiene la seguridad de acceso a la base de datos
 #try:
-#    exec(open(os.path.join(BASE_DIR, 'elsonajero', 'settings_local.py')).read())
+#    exec(open(os.path.join(BASE_DIR, 'donheli', 'settings_local.py')).read())
 #except IOError:
 #    raise Exception('error reading local settings')
