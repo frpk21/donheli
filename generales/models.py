@@ -3,9 +3,6 @@ from django.template.defaultfilters import slugify
 from ckeditor.fields import RichTextField
 from datetime import datetime
 from django.contrib.auth.models import User
-from django.conf import settings
-from django.urls import reverse
-from multiselectfield import MultiSelectField
 
 
 # Create your models here.
