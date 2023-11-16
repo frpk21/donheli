@@ -6,7 +6,7 @@ from django.views import generic
 
 from django.contrib.auth.mixins import PermissionRequiredMixin
 
-from generales.models import Noticias, Categoria, SubCategoria, Comentario, Contacto
+from generales.models import Noticias, Categoria, SubCategoria, Comentario, Contacto, Portada, Reflexiones
 
 from datetime import date
 
@@ -24,45 +24,25 @@ import tweepy
 def HomeView(request):
     template_name = 'generales/home.html'
     hoy = date.today()
-    titulares = Noticias.objects.filter(orden_destacado=0,fecha_inicio_publicacion__lte=hoy).order_by('-id')[:5]
-    titulares1 = Noticias.objects.filter(orden_destacado=0, subcategoria__id=1).exclude(subcategoria=12).order_by('-id')[:2]
-    titulares2 = Noticias.objects.filter(orden_destacado=0, subcategoria__id=2).order_by('-id')[:4]
-    titulares3 = Noticias.objects.filter(orden_destacado=0, subcategoria__categoria__gte=2).exclude(subcategoria=12).order_by('-id')[:4]
-    ultima_hora = Noticias.objects.filter(ultima_hora=True).order_by('-id')[:4]
-    virales2 = Noticias.objects.all().order_by('-id')[:5]
-    loquedicen = Noticias.objects.filter(ultima_hora=False, subcategoria__categoria=5).last()
-    deportes1 = Noticias.objects.filter(orden_destacado=1, ultima_hora=False, subcategoria__categoria=3).last()
-    deportes2 = Noticias.objects.filter(orden_destacado=2, ultima_hora=False, subcategoria__categoria=3).last()
-    deportes3 = Noticias.objects.filter(orden_destacado__gte=3, ultima_hora=False, subcategoria__categoria=3).last()
-    deportes4 = Noticias.objects.filter(orden_destacado=4, ultima_hora=False, subcategoria__categoria=3).last()
-   
-    if not deportes3:
-        deportes3 = Noticias.objects.filter(orden_destacado__gte=3, ultima_hora=False).last()
-    if not ultima_hora:
-        ultima_hora = Noticias.objects.all().order_by('-id')[:3]
+    portadas = Portada.objects.all()
+    reflexiones = Reflexiones.objects.all()[:10]
+    video = Reflexiones.objects.all().last()
+    reflexiones = Reflexiones.objects.all().order_by('-modificado')[:3]
+    titulares = Noticias.objects.filter(orden_destacado=0,fecha_inicio_publicacion__lte=hoy).order_by('-id')[:3]
+    destacado1 = Noticias.objects.filter(orden_destacado=1).last()
+    destacado2 = Noticias.objects.filter(orden_destacado=2).order_by('-id')[:3]
+    generales = Noticias.objects.filter(orden_destacado=3).order_by('-id')[:3]  # categoria__gte=2
     categorias = Categoria.objects.all().order_by("nombre")
-    subcategorias = SubCategoria.objects.all().order_by("nombre")
-
     context = {'hoy': hoy,
-       
-        'loquedicen': loquedicen,
-
-        'titulares1': titulares1,
-
-        'titulares2': titulares2,
-        'titulares': titulares,
-        'titulares3': titulares3,
-        'ultima_hora': ultima_hora,
-        'categorias': categorias,
-        'subcategorias': subcategorias,
-        'virales2': virales2,
-        'deportes1': deportes1,
-        'deportes2': deportes2,
-        'deportes3': deportes3,
-        'deportes4': deportes4
+               'categorias': categorias,
+               'video': video,
+               'reflexiones': reflexiones,
+               'portadas': portadas,
+               'titulares': titulares,
+               'destacado1': destacado1,
+               'destacado2': destacado2,
+               'generales': generales
         }
-    manana = hoy + timedelta(days=1)
-
 
     if request.POST.get('email'):
         form_home = SuscribirseForm(request.POST)

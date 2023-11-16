@@ -1,280 +1,265 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+        {% load static %}
 
-    <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/base/assets/images/favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/base/assets/images/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/base/assets/images/favicon.png">
-    <link rel="manifest" href="/static/base/assets/images/favicon/site.webmanifest">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#feed01"/>
+        <title>Don Heli</title>
+        <meta name="author" content="BUSYCOL">
+        <meta name="description" content="donheli.com">
+        <meta name="keywords" content="vida, salud, colombia, esperanza, crecimiento, neiva, huila, jorge, charry, celebridades">
 
-    <!-- Fonts URL -->
-    <link href="https://fonts.googleapis.com/css?family=Karla:400,700%7CPlayfair+Display:400,500,600,700,800,900%7CWork+Sans:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <!-- SOCIAL MEDIA META -->
+        <meta property="og:description" content="donheli.com | Vida & Salud">
+        <meta property="og:image" content="http://donheli.com.co">
+        <meta property="og:site_name" content="don heli">
+        <meta property="og:title" content="don heli">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://donheli.com.co">
 
+        <!-- TWITTER META -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@donheli">
+        <meta name="twitter:creator" content="@donheli">
+        <meta name="twitter:title" content="don heli">
+        <meta name="twitter:description" content="donheli.com | Vida & Salud">
+        <meta name="twitter:image" content="http://donheli.com.co">
 
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="/static/base/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/base/assets/css/bootstrap-datepicker.min.css">
-    <link rel="stylesheet" href="/static/base/assets/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="/static/base/assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="/static/base/assets/css/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="/static/base/assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="/static/base/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/static/base/assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/static/base/assets/css/animate.css">
-    <link rel="stylesheet" href="/static/base/assets/css/hover-min.css">
-    <link rel="stylesheet" href="/static/base/assets/css/muzex-icons.css">
+        <!-- FAVICON FILES -->
+        <link href="/static/base/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+        <link href="/static/base/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+        <link href="/static/base/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
+        <link href="/static/base/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
+        <link href="/static/base/images/favicon.png" rel="shortcut icon">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/static/base/assets/css/style.css">
-    <link rel="stylesheet" href="/static/base/assets/css/responsive.css">
-
-
-
-    <link rel="stylesheet" href="/static/base/wandau_template/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/static/base/wandau_template/css/odometer.min.css">
-    <link rel="stylesheet" href="/static/base/wandau_template/css/fancybox.min.css">
-    <link rel="stylesheet" href="/static/base/wandau_template/css/swiper.min.css">
-    <link rel="stylesheet" href="/static/base/wandau_template/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/base/wandau_template/css/style.css">
-</head>
-
-<body>
-    <!-- <div class="preloader">
-        <div class="lds-ripple">
-            <div></div>
-            <div></div>
+        <!-- CSS FILES -->
+        <link rel="stylesheet" href="/static/base/css/fontawesome.min.css">
+        <link rel="stylesheet" href="/static/base/css/odometer.min.css">
+        <link rel="stylesheet" href="/static/base/css/fancybox.min.css">
+        <link rel="stylesheet" href="/static/base/css/swiper.min.css">
+        <link rel="stylesheet" href="/static/base/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/base/css/style.css">
+    </head>
+    <body>
+        <div class="modal" id="ventana_modal_video" style="width: 100%;">
+            <div class="modal-dialog responsive">
+                <div class="modal-content ventana_modal_video" style="width: 100%;  margin-top:150px; background-color: rgba(0, 0, 0, 0.736);">
+                    <!-- Modal Header -->
+                    <div class="modal-header" style="align-content: right;">
+                        <button style="color:white;" type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div><hr color="black"/>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <iframe class="embed-responsive " width="95%" height="348"
+                                    src="https://youtube.com/embed/6tSVxVUi-pg?si=Yk-jhKGF-udRKRo4" 
+                                    frameborder="0"
+                                    autoplay; allow="accelerometer"; clipboard-write; gyroscope; allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>/.preloader -->
-    <div class="page-wrapper">
-        <nav class="main-nav-one stricky main-nav-one__home-two">
+        <div class="preloader" id="preloader">
+        <svg viewBox="0 0 1920 1080" preserveAspectRatio="none" version="1.1">
+            <path d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z"></path>
+        </svg>
+        <div class="inner">
+            <canvas class="progress-bar" id="progress-bar" width="200" height="200"></canvas>
+            <figure><img src="/static/base/images/favicon.png" alt="preloader"></figure>
+            <small>Cargando</small> </div>
+        <!-- end inner -->
+        </div>
+        <!-- end preloder -->
+        <div class="page-transition">
+        <svg viewBox="0 0 1920 1080" preserveAspectRatio="none" version="1.1">
+            <path d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,980 1294.66667,930 960,930 C625.333333,930 305.333333,980 0,1080 L0,0 Z"></path>
+        </svg>
+        </div>
+        <!-- end page-transition -->
+        <div class="smooth-scroll">
+        <div class="section-wrapper" data-scroll-section>
+            <div class="search-box">
             <div class="container">
-                <div class="inner-container">
-                    <div class="logo-box">
-                        <a href="{% url 'generales:home' %}">
-                            <img src="/static/base/assets/images/LOGOS-05.png" alt="" width="143">
-                        </a>
-                        <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
-                    </div><!-- /.logo-box -->
-                    <div class="main-nav__main-navigation">
-                        <ul class="main-nav__navigation-box">
-                            <li class="dropdown">
-                                <a href="about.html">Nosotros</a>
-                                <ul>
-                                    <li><a href="collection-fullwidth.html">Visi&oacute;n</a></li>
-                                    <li><a href="collection-grid.html">Justificaci&oacute;n</a></li>
-                                    <li><a href="collection-masonary.html">Objetivos</a></li>
-                                    <li><a href="collection-masonary.html">Usuarios</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="collection-grid.html">Mediateca</a>
-                                <ul>
-                                    <li><a href="collection-fullwidth.html">Cat&aacute;stro Ind&iacute;gena</a></li>
-                                    <li><a href="collection-grid.html">Salvaguardamos</a></li>
-                                    <li><a href="collection-masonary.html">Censo</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="collection-grid.html">Ludoteca</a>
-                                <ul>
-                                    <li><a href="collection-fullwidth.html">Pueblos Ind&iacute;genas</a></li>
-                                    <li><a href="collection-grid.html">Capsulas Pedag&oacute;gicas</a></li>
-                                    <li><a href="collection-masonary.html">Catastro Ind&iacute;gena</a></li>
-                                    <li><a href="collection-masonary.html">Aprendamos con </a></li>
-                                </ul>
-                            </li>
-                            <li><a href="news-standard.html">Noticias</a> </li>
-                            <li><a href="contact.html">Contacto</a></li>
+                <div class="form">
+                <h3>SEARCH EVENT</h3>
+                <input type="search" placeholder="What are you looking for ?">
+                <input type="submit" value="SEARCH">
+                </div>
+                <!-- end form -->
+                <div class="search-events">
+                <ul>
+                    <li>
+                    <h5><a href="#">Artemisia Gentileschi talk with Maria</a></h5>
+                    <small>15 August – 31 October 2020</small> </li>
+                    <li>
+                    <h5><a href="#">Artemisia Gentileschi talk with Maria</a></h5>
+                    <small>15 August – 31 October 2020</small> </li>
+                    <li>
+                    <h5><a href="#">Artemisia Gentileschi talk with Maria</a></h5>
+                    <small>15 August – 31 October 2020</small> </li>
+                </ul>
+                </div>
+                <!-- end search-events -->
+            </div>
+            </div>
+            <!-- end search-box -->
+            <aside class="side-widget">
+                <svg viewBox="0 0 600 1080" preserveAspectRatio="none" version="1.1">
+                    <path d="M540,1080H0V0h540c0,179.85,0,359.7,0,539.54C540,719.7,540,899.85,540,1080z"></path>
+                </svg>
+                <div class="inner">
+                    <div class="widgegt">
+                        <div class="justify-content-center text-center">
+                            <img src="/static/base/images/logo_blanco.png" width="30%" alt="Image">
+                        </div><br><br><br>
+                        <figure class="text-center"><img src="/static/base/images/jorge.png" width="50%" alt="Image"></figure>
+                        <p>It speedily me addition <strong>weddings vicinity</strong> in pleasure. Happiness commanded an conveying breakfast in. Regard her say warmly elinor. Him these are visit front end for <u>seven walls</u>. Money eat scale now ask law learn.</p>
+                    </div>
+                </div>
+                <div class="display-mobile">
+                    <div class="custom-menu"></div>
+                    <div class="site-menu" style="align-items: center;">
+                        <ul>
+                        <li><a href="visit.html" data-scroll-to>Visit</a></li>
+                        <li><a href="exhibitions.html" data-scroll-to>Exhibitions</a></li>
+                        <li><a href="collections.html" data-scroll-to>Collections</a></li>
+                        <li><a href="about.html" data-scroll-to>About</a></li>
+                        <li><a href="contact.html" data-scroll-to>Contact</a></li>
                         </ul>
                     </div>
-                    <div class="main-nav__right">
-                        <a href="#" class="search-popup__toggler"><i class="muzex-icon-search"></i></a>
-                        <a class="sidemenu-icon side-content__toggler" href="#"><i class="muzex-icon-menu"></i></a>
-                    </div>
                 </div>
-            </div>
-        </nav>
-
-        {% block contenido %}Blank{% endblock contenido %}
-
-        <footer class="site-footer" style="background-color: rgb(23, 65, 51);">
-            <div class="row justify-content-center" style="padding-top: 15px;">
-                <div class="col-1 text-center"><span><a class="fab fa-facebook-f" style="color: #f7ab05;" href="https://www.facebook.com/Elsonajeroweb"></a></span></div>
-                <div class="col-1 text-center"><span><a class="fab fa-twitter" style="color: #f7ab05;" href="https://www.facebook.com/Elsonajeroweb"></a></span></div>
-                <div class="col-1 text-center"><span><a class="fab fa-instagram" style="color: #f7ab05;" href="https://www.facebook.com/Elsonajeroweb"></a></span></div>
-            </div>
-            <div class="site-footer__upper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm">
-                            <div>
-                                <h4 class="" style="color: #f7ab05;">Direcci&oacute;n</h4>
-                                <p>Calle 12B # 4 - 38</p>
-                                <p>Barrio La Candelaria</p>
-                                <p>Bogot&aacute;, D. C., Colombia</p>
-                                <p>111711</p>
-                            </div>
-                        </div>
-                        <div class="col-sm">
-                            <div>
-                                <h4 class="" style="color: #f7ab05;">Tel&eacute;fonos</h4>
-                                <p>(+57) 1 284 2168</p>
-                                <p>(+57) 1 805 0774</p>
-                                <p>(+57) 1 805 0772</p>
-                            </div>
-                        </div>
-                        <div class="col-sm">
-                            <div>
-                                <h4 class="" style="color: #f7ab05;">Fax</h4>
-                                <p>(+57) 1 284 3465</p>
-                            </div>
-                            <div>
-                                <h4 class="" style="color: #f7ab05;">E-Mail</h4>
-                                <p>poblacion@onic.org.co</p>
-                            </div>
-                        </div>
-                        <div class="col-sm">
-                            <div class="text-center">
-                                <img src="/static/base/assets/images/LOGOS-01.png" alt="" class="logo-blanco" width="100%;">
-                            </div>
-                        </div>
-                    </div>
+            </aside>
+            <nav class="navbar">
+                <div class="logo"> <a href="index.html"> <img src="/static/base/images/logo.png" alt="Image"> </a> </div>
+                <div class="custom-menu"></div>
+                <div class="site-menu">
+                    <ul>
+                        {% for item in categorias %}
+                            <li><a href="visit.html" data-scroll-to>{{item.nombre}}</a></li>
+                        {% endfor %}
+                    </ul>
                 </div>
-            </div>
-            
-            <div class="site-footer__bottom">
-                <div class="container">
-                    <div class="inner-container">
-                        <p><span>&copy;&nbsp;<script>
-                            document.write(new Date().getFullYear())
-                            </script> ONIC</span>
-                        </p>
-                        <div class="site-footer__bottom-links">
-                            <a href="#">T&eacute;rminos & condiciones</a>
-                            <a href="#">Pol&iacute;tica de privacidad & T&eacute;rminos de uso</a>
-                        </div>
-                    </div>
+                <div class="search-buttonxxx"> <i class="far fa-searchxxx"></i> </div>
+                <div class="hamburger-menu">
+                    <svg class="hamburger" width="30" height="30" viewBox="0 0 30 30">
+                    <path class="line line-top" d="M0,9h30"/>
+                    <path class="line line-center" d="M0,15h30"/>
+                    <path class="line line-bottom" d="M0,21h30"/>
+                    </svg>
                 </div>
-            </div>
-        </footer>
-    </div>
-    <div class="search-popup">
-        <div class="search-popup__overlay custom-cursor__overlay">
-            <div class="cursor"></div>
-            <div class="cursor-follower"></div>
-        </div>
-        <div class="search-popup__inner">
-            <form action="#" class="search-popup__form">
-                <input type="text" name="search" placeholder="Ingrese aqui su busqueda....">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-    </div>
-    <div class="side-content__block">
-        <div class="side-content__block-overlay custom-cursor__overlay">
-            <div class="cursor"></div>
-            <div class="cursor-follower"></div>
-        </div>
-        <div class="side-content__block-inner ">
-            <a href="{% url 'generales:home' %}">
-                <img src="/static/base/assets/images/logo-.png" alt="" width="143">
-            </a>
-            <div class="side-content__block-about">
-                <h3 class="side-content__block__title">Nosotros</h3>
-                <p class="side-content__block-about__text">{{nosotros}}</p>
-                <a href="#" class="thm-btn side-content__block-about__btn">Ver M&aacute;s</a>
-            </div>
-            <hr class="side-content__block-line" />
-            <div class="side-content__block-contact">
-                <h3 class="side-content__block__title">Cont&aacute;ctenos</h3>
-                <ul class="side-content__block-contact__list">
-                    <li class="side-content__block-contact__list-item">
-                        <i class="fa fa-map-marker"></i>
-                        Calle 12B # 4 - 38<br>
-                        Barrio La Candelaria<br>
-                        Bogot&aacute;, D. C., Colombia
-                    </li>
-                    <li class="side-content__block-contact__list-item">
-                        <i class="fa fa-phone"></i>
-                        <a href="tel:526-236-895-4732">(+57) 1 284 2168<br>
-                            (+57) 1 805 0774<br>
-                            (+57) 1 805 0772
-                    </li>
-                    <li class="side-content__block-contact__list-item">
-                        <i class="fa fa-envelope"></i>
-                        <a href="mailto:example@mail.com">poblacion@onic.org.co</a>
-                    </li>
-                    <li class="side-content__block-contact__list-item">
-                        <i class="fa fa-clock"></i>
-                        Horario de Atenci&oacute;n: 09.00 a 17.00 Lunes - Viernes
-                    </li>
-                </ul>
-            </div>
-            <p class="side-content__block__text site-footer__copy-text"><a href="#">ONIC</a> <small><i class="fa fa-copyright"></i> {{hoy.year}} Todos los derechos reservados.</small></p>
-        </div>
-    </div>
-
-    <div class="side-menu__block">
-
-        <a href="#" class="side-menu__toggler side-menu__close-btn"><i class="fa fa-times"></i>
-            <!-- /.fa fa-close --></a>
-
-        <div class="side-menu__block-overlay custom-cursor__overlay">
-            <div class="cursor"></div>
-            <div class="cursor-follower"></div>
-        </div><!-- /.side-menu__block-overlay -->
-        <div class="side-menu__block-inner ">
-
-            <a href="{% url 'generales:home' %}" class="side-menu__logo"><img src="/static/base/assets/images/logo-light-1-1.png" alt="" width="143"></a>
-            <nav class="mobile-nav__container">
-                <!-- content is loading via js -->
             </nav>
-            <p class="side-menu__block__copy">(c) 2020 <a href="#">Muzex</a> - All rights reserved.</p>
-            <div class="side-menu__social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-google-plus"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <!-- end navbar -->
+            <header class="slider">
+                <div class="swiper-container slider-images">
+                    <div class="swiper-wrapper">
+                        {% for item in portadas %}
+                            <div class="swiper-slide" data-background="{{item.imagen.url}}">
+                                <div class="mobile-slide" data-background="/static/base/images/slide-mobile01.jpg"></div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="container-fluid slider-nav">
+                        <div class="swiper-pagination"></div>
+                        <!-- end swiper-pagination -->
+                        <div class="swiper-fraction"></div>
+                        <!-- end swiper-fraction -->
+                        <div class="button-prev"><i class="far fa-chevron-down"></i></div>
+                        <!-- end swiper-button-prev -->
+                        <div class="button-next"><i class="far fa-chevron-up"></i></div>
+                        <!-- end swiper-button-next -->
+                    </div>
+                </div>
+                <div class="swiper-container slider-texts">
+                    <svg width="580" height="400" class="svg-morph">
+                    <path id="svg_morph" d="m261,30.4375c0,0 114,6 151,75c37,69 37,174 6,206.5625c-31,32.5625 -138,11.4375 -196,-19.5625c-58,-31 -86,-62 -90,-134.4375c12,-136.5625 92,-126.5625 129,-127.5625z" />
+                    </svg>
+                    <div class="swiper-wrapper">
+                        {% for item in titulares %}
+                            <div class="swiper-slide">
+                                <div class="container-fluid">
+                                    <h1>{{item.titulo|safe}}</h1>
+                                    <p>{{item.subtitulo}}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="play-now">
+                    <a href="{{video.url_video}}" data-fancybox data-width="640" data-height="360"  class="play-btn"></a>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                    <defs>
+                        <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+                    </defs>
+                    <circle cx="150" cy="100" r="75" fill="none"/>
+                    <g>
+                        <use xlink:href="#circlePath" fill="none"/>
+                        <text>
+                        <textPath xlink:href="#circlePath">PLAY VIDEO - PLAY VIDEO - PLAY VIDEO -</textPath>
+                        </text>
+                    </g>
+                    </svg>
+                </div>
+            </header>
+            
+            {% block contenido %}Blank{% endblock contenido %}
+            
+            <footer class="footer">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="widget-title">don Hel&iacute;</h6>
+                    <ul class="footer-menu">
+                        {% for item in categorias %}
+                            <li><a href="#">{{item.nombre}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!-- end col-4 -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="widget-title">Connect Us</h6>
+                    <ul class="social-media">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i> /wandau-uk</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> /wandau-museum</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> /wandau-tv</a></li>
+                    </ul>
+                </div>
+                <!-- end col-4 
+                <div class="col-lg-4">
+                    <h6 class="widget-title">Visit Us Now</h6>
+                    <address class="address">
+                    Cromwell Road New Town SW7 <strong>London - England</strong> <i class="fas fa-info-circle"></i> +44 (0)20 7942 2000
+                    </address>
+                </div>-->
+                <!-- end col-4 -->
+                </div>
+                <!-- end row -->
             </div>
-        </div><!-- /.side-menu__block-inner -->
-    </div><!-- /.side-menu__block -->
+            <!-- end container -->
+            <div class="footer-bottom">
+                <div class="container"> <span class="copyright">© {{hoy.year}} Colombia LA | donheli.com</span></div>
+                <!-- end container -->
+            </div>
+            <!-- end footer-bottom -->
+            </footer>
+            <!-- end footer -->
+        </div>
+        </div>
 
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
-
-    <!-- Template JS -->
-    <script src="/static/base/assets/js/jquery.min.js"></script>
-    <script src="/static/base/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/base/assets/js/bootstrap-datepicker.min.js"></script>
-    <script src="/static/base/assets/js/bootstrap-select.min.js"></script>
-    <script src="/static/base/assets/js/isotope.js"></script>
-    <script src="/static/base/assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="/static/base/assets/js/jquery.counterup.min.js"></script>
-    <script src="/static/base/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="/static/base/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="/static/base/assets/js/jquery.validate.min.js"></script>
-    <script src="/static/base/assets/js/owl.carousel.min.js"></script>
-    <script src="/static/base/assets/js/TweenMax.min.js"></script>
-    <script src="/static/base/assets/js/waypoints.min.js"></script>
-    <script src="/static/base/assets/js/wow.min.js"></script>
-    <script src="/static/base/assets/js/jquery.lettering.min.js"></script>
-    <script src="/static/base/assets/js/jquery.circleType.js"></script>
-
-    <!-- Custom Scripts -->
-    <script src="/static/base/assets/js/theme.js"></script>
-
-
-
-
-
-
-
-   
-</body>
-
+        <!-- JS FILES -->
+        <script src="/static/base/js/jquery.min.js"></script>
+        <script src="/static/base/js/bootstrap.min.js"></script>
+        <script src="/static/base/js/locomotive-scroll.min.js"></script>
+        <script src="/static/base/js/kinetic-slider.js"></script>
+        <script src="/static/base/js/fancybox.min.js"></script>
+        <script src="/static/base/js/odometer.min.js"></script>
+        <script src="/static/base/js/swiper.min.js"></script>
+        <script src="/static/base/js/scripts.js"></script>
+    </body>
 </html>
