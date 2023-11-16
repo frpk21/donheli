@@ -15,10 +15,8 @@ from django.shortcuts import render
 from .forms import SuscribirseForm, ComentarioForm, ContactoForm
 
 from django.http import JsonResponse
-from datetime import datetime, timedelta
-import time
-#import facebook
-import tweepy
+from datetime import timedelta
+
 
 
 def HomeView(request):

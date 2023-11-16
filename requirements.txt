@@ -1,0 +1,4 @@
+django==3.2.21
+django-ckeditor==6.3.2
+django-tempus-dominus==5.1.2.17
+psycopg2-binary==2.9.7
